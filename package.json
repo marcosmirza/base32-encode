@@ -1,6 +1,6 @@
 {
   "name": "base32-encode",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Encodes and decodes byte buffers to Crockford Base32 strings for checksum-safe human-readable identifiers.",
   "type": "module",
   "main": "src/index.js",
