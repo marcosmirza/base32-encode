@@ -22,3 +22,10 @@ The one edge to know about: decoding is permissive on input (it accepts lowercas
 
 - `encode(buffer: Uint8Array): string` — returns the Crockford Base32 encoding.
 - `decode(str: string): Uint8Array` — returns the decoded bytes. Throws on invalid characters or non-zero trailing bits.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
